@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <button mat-button routerLink="principal">Principal</button>
+    
+    <button mat-button routerLink="listado">Lista de precios</button>
+
+    <button mat-button [matMenuTriggerFor]="menu">Servicios</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="catalogo">Lista de productos</button>
+      <button mat-menu-item routerLink="devolucion">Devolucion</button>
+    </mat-menu>
+    
+    
+</div>
+

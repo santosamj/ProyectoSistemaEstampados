@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>Listado de Productos</h2>
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" class="fs-5">Producto</th>
+        <th scope="col" class="fs-5">Material</th>
+        <th scope="col" class="fs-5">Estampado</th>
+        <th scope="col" class="fs-5">Subliminado</th>
+        <th scope="col" class="fs-5">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td class="fs-4">{{ producto.producto }}</td>
+        <td class="fs-4">{{ producto.material }}</td>
+        <td class="fs-4">{{ producto.estampado }}</td>
+        <td class="fs-4">{{ producto.subliminado }}</td>
+        <td class="fs-4">{{ producto.precio | currency:'USD':'symbol':'1.2-2' }}</td>
+      </tr>
+      <!-- Nuevos productos -->
+      <tr>
+        <td class="fs-4">Buzos</td>
+        <td class="fs-4">Algodón, Lino, Poliester y Seda</td>
+        <td class="fs-4">Sí</td>
+        <td class="fs-4">Sí</td>
+        <td class="fs-4">$29.99</td>
+      </tr>
+      <tr>
+        <td class="fs-4">Gorras</td>
+        <td class="fs-4">Poliéster</td>
+        <td class="fs-4">No</td>
+        <td class="fs-4">Sí</td>
+        <td class="fs-4">$12.99</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
